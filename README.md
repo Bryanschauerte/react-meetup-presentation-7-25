@@ -14,7 +14,7 @@ I seperated the presentation into sections and different branches.
 
 - [Getting Started](#getting-started)
 - [Make A Lambda](#make-a-lambda)
-
+- [Add Webpack and Dev Tools](#add-webpack-and-dev-tools)
 
 ## Getting Started
 
@@ -23,17 +23,11 @@ I seperated the presentation into sections and different branches.
 
 - Sign in to the console and create a new IAM role
  - Under 'users' hit 'add'
-
  - Give programmatic access
-
  - Under attach Existing policies add 'AdministratorAccess'
-
  - Hit the create user button
-
  - Take note of the Access key ID and Secret access key
-
  - Install the [awscli](https://aws.amazon.com/cli/)
-
  - Use the command `aws configure` to add ID and Key earlier noted
 
 - Install the [Serverless](https://serverless.com/framework/docs/providers/aws/guide/quick-start/) framework for AWS
@@ -57,7 +51,6 @@ I seperated the presentation into sections and different branches.
  - Callback(optionals) returns information to the user -> i.e. callback(response_error, response_success)
 
 
-
 * `cd my-service`
 * `serverless deploy -v`
  * Deploys all your functions to AWS/ Updates all changes to your functions
@@ -69,3 +62,29 @@ I seperated the presentation into sections and different branches.
   * fires your lambda locally with logs
 * `serverless remove`
   * Removes all your function from AWS
+
+## Add Webpack and Dev Tools
+
+Branch partTwo holds the npm package you will need as well as the changes to the folder-structure and yml file.
+
+We added a plugin to the yml file for serverless-webpack and have webpack package the npm modules required
+
+This allows us a few niffy commands such as....
+
+* `serverless webpack serve`
+  * Creates a local mock of lambda and waits on the declared paths to be invoked.
+
+  * You can use Postman on http://localhost:8000. Remember to add the header "Content-Type":"application/x-www-form-urlencoded"
+
+  * Example 1, a GET request to http://localhost:8000/somePath/aValue allows event.path.query to be accessible in the lambda function with the value = 'aValue'
+
+  * Example 2, a GET request to http://localhost:8000/someOtherPath?a=1 allows event.query.a to be accessible in the lambda function with the value = 1
+
+* `serverless invoke local -f hello -l`
+  * Fires your lambda locally with logs
+
+* `serverless webpack invoke --function someFunction --path ./src/fetching.test.json`
+  * Uses webpack to bundle and invoke someFunction using a json file as the event param.
+
+* `serverless deploy`
+  * Will now deploy the bundled functions

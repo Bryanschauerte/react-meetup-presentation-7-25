@@ -17,6 +17,12 @@ service: my-service
 # Check out our docs for more details
 # frameworkVersion: "=X.X.X"
 
+plugins:
+  - serverless-webpack
+
+custom:
+  webpackIncludeModules: true
+
 provider:
   name: aws
   runtime: nodejs6.10
@@ -57,7 +63,23 @@ provider:
 functions:
   hello:
     handler: handler.hello
+  someFunction:
+    handler: newFunctions.someFunction
+    events:
+      - http:
+          path: somePath/{query}
+          method: GET
+          integration: lambda
+          cors: true
 
+  someOtherFunction:
+    handler: newFunctions.someOtherFunction
+    events:
+      - http:
+          path: someOtherPath #event.query
+          method: GET
+          integration: lambda
+          cors: true
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
