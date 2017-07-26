@@ -14,13 +14,7 @@ I seperated the presentation into sections and different branches.
 
 - [Getting Started](#getting-started)
 - [Make A Lambda](#make-a-lambda)
-- [Folder Structure](#folder-structure)
-- [Available Scripts](#available-scripts)
-  - [npm start](#npm-start)
-  - [npm test](#npm-test)
-  - [npm run build](#npm-run-build)
-  - [npm run eject](#npm-run-eject)
-- [Syntax Highlighting in the
+
 
 ## Getting Started
 
