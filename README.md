@@ -92,11 +92,6 @@ This allows us a few niffy commands such as....
 * `serverless deploy`
   * Will now deploy the bundled functions
 
-  amazon-cognito-identity-js
-
-  Pool Id us-west-2_6isvU9SN0
-  Pool ARN arn:aws:cognito-idp:us-west-2:671953655197:userpool/us-west-2_6isvU9SN0
-  67lrt2180c01uus46q4rqa5rrp
 
 ## Adding Cognito to Your App
 (branch partThree)
