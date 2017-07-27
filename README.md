@@ -6,7 +6,7 @@ Repo with examples of Serverless.
 
 This project's frontend was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-Backend, Serverless docs can be found at [Serverless.com](https:www.serverless.com).
+Backend, Serverless docs can be found at [Serverless.com](https://serverless.com).
 
 I seperated the presentation into sections and different branches.  
 
