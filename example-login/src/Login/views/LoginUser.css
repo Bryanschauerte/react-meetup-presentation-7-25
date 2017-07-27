@@ -1,0 +1,36 @@
+.login-sign-in-container {
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+    margin: 10px;
+}
+
+.login-sign-in-form {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    color: red;
+}
+
+input {
+    height: 40px;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.login-section-title {
+    font-weight: 300;
+}
+
+.loginForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+div.inner-card {
+    flex-direction: column;
+}

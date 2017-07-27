@@ -80,6 +80,17 @@ functions:
           method: GET
           integration: lambda
           cors: true
+
+  authNeededFunc:
+    handler: newFunctions.authNeededFunc
+    events:
+      - http:
+          path: authPath #event.query
+          method: POST
+          integration: lambda
+          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-west-2:671953655197:userpool/us-west-2_gj5EhwKNU
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details

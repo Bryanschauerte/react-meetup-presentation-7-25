@@ -1,0 +1,31 @@
+button {
+    display: inline-block;
+    font-family: 'roboto', 'helvetica neue', 'helvetica';
+    padding: .5rem 0;
+    margin: .5rem 1rem;
+    width: 11rem;
+    height: 50px;
+    background: transparent;
+    color: black;
+    border: 1px solid black;
+    transition: all 200ms;
+    letter-spacing: 1px;
+    opacity: .5;
+    cursor: pointer;
+    font-size: 16px
+}
+
+button:hover {
+    border: .5px solid #e3e3e3;
+    background-color: #3e3;
+    letter-spacing: 3px;
+    opacity: 1;
+}
+
+.selected-button {
+    border: .5px solid $color-secondary;
+    background-color: $color-primary;
+    cursor: default;
+    letter-spacing: 3px;
+    opacity: 1;
+}
