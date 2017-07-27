@@ -15,7 +15,7 @@ I seperated the presentation into sections and different branches.
 - [Getting Started](#getting-started)
 - [Make A Lambda](#make-a-lambda)
 - [Add Webpack and Dev Tools](#add-webpack-and-dev-tools)
-- [Adding Cognito to Your App](#adding-cognito-to-you-app)
+- [Adding Cognito to Your App](#adding-cognito-to-your-app)
 
 ## Getting Started
 (branch partOne)
@@ -121,7 +121,7 @@ To USE Cognito you will need a user pool.
  - Hit create pool, and once done grab the 'Pool Id' and 'Pool ARN'
 
  - Click on the app clients and grab the 'App client id'
-  - (in our app, I stuck it in an folder called 'hidden'<br/>
+  - in our app, I stuck it in an folder called 'hidden'<br/>
 
   `{
       cognito: {
